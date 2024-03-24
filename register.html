@@ -1,63 +1,68 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
-    <title>Register NatShoes</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NatShoes - Registrasi</title>
+  <link rel="stylesheet" href="./css/style_register.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
 </head>
-<body>
-    <center>
-        <div>
-            <header>
-                <div >
-                    <img src="./assets/images/logosepatu.png" alt="Logo NatShoes">
-                </div>
-            </header>
-            <main>
-                <h2>Register</h2>
-                <form action="login.html" method="post">
-                    <table cellpadding="10">
-                        <tr>
-                            <td><label for="nama_lengkap">Nama Lengkap</label></td>
-                            <td>:</td>
-                            <td><input type="text" name="nama_lengkap" required></td>
-                        </tr>
-                        <tr>
-                            <td><label for="username">Username</label></td>
-                            <td>:</td>
-                            <td><input type="text" name="username" required></td>
-                        </tr>
-                        <tr>
-                            <td><label for="email">Email</label></td>
-                            <td>:</td>
-                            <td><input type="email" name="email" required></td>
-                        </tr>
-                        <tr>
-                            <td><label for="nomor_handphone">Nomor Handphone</label></td>
-                            <td>:</td>
-                            <td><input type="tel" name="nomor_handphone" id="nomor_handphone" required></td>
-                        </tr>
-                        <tr>
-                            <td><label for="password">Password</label></td>
-                            <td>:</td>
-                            <td><input type="password" name="password" required></td>
-                        </tr>
-                        <tr>
-                            <td><label for="co_password">Confirm Password</label></td>
-                            <td>:</td>
-                            <td><input type="password" name="co_password" required></td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td></td>
-                            <td><button type="submit" name="register">Register</button></td>
-                        </tr>
-                    </table>
-                    <p>Sudah punya akun? <a href="login.html">Login</a> </p>
-                </form>
-            </main>
+  <body>
+    <nav>
+      <div class="logo-container">
+        <img src="./assets/images/logospt1.png" alt="Logo NatShoes" width="30%" class="logo"/>
+      </div>
+      <input type="checkbox" id="click">
+      <label for="click" class="menu-btn">
+        <i class="fas fa-bars"></i>
+      </label>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a class="active" href="register.html">Register</a></li>
+      </ul>
+    </nav>
+  <main>
+    <div class="container-card"> 
+      <div class="card text-center">
+        <div class="card-header">
+          <h3>Register</h3>
         </div>
-        <div class="footer">
-            &copy; 2024 NatShoes
+          <div class="card-body">
+            <form action="login.html">
+              <div class="">
+                <label for="username" class="form-label">Username</label>
+                <input type="text" class="form-control" id="username" name="username" required>
+              </div><br>
+              <div class="">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+              </div><br>
+              <div class="">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" class="form-control" id="password" name="password" required>
+              </div><br>
+              <div class="">
+                <label for="konfirmasiPassword" class="form-label">Konfirmasi Password</label>
+                <input type="password" class="form-control" id="konfirmasiPassword" name="konfirmasiPassword" required>
+              </div>
+                <button type="submit" class="btn btn-primary">Register</button>
+              </form>
+              </div>
+              <div class="card-footer text-muted">
+                  <p>Sudah punya akun? <a href="login.html">Login Sekarang</a></p>
+              </div>
+            </form>
+          </div>
         </div>
-    </center>
+      </div> 
+  </main>
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+          <p>Copyright &copy; 2024 NatShoes</p>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
