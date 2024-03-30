@@ -28,6 +28,30 @@
       <p>Kami memproduksi berbagai macam sepatu berkualitas tinggi untuk kebutuhan Anda.</p>
       <a href="#">Lihat Produk</a>
     </div>
+    <div class="unggulan">
+      <h3>Produk Terbaru Kami</h3>
+    </div>
+    <div class="slides">
+      <div class="slide">
+        <img src="./assets/images/sneaker2.png" alt="">
+      </div>
+      <div class="slide">
+        <img src="./assets/images/sneaker3.png" alt="">
+      </div>
+      <div class="slide">
+        <img src="./assets/images/sneaker4.png" alt="">
+      </div>
+      <div class="slide">
+        <img src="./assets/images/sneaker5.png" alt="">
+      </div>
+      <div class="slide">
+        <img src="./assets/images/sneaker6.png" alt="">
+      </div>
+      <div class="navigation">
+        <a class = "prev" onclick = "plusSlides(-1)">&#10094;</a>
+        <a class = "next" onclick = "plusSlides(-1)">&#10095;</a>
+      </div>
+    </div>
     <div class="produksi">
       <h2>Kenapa Percaya Kami?</h2>
       <div class="row">
@@ -79,5 +103,32 @@
         </div>
       </div>
     </footer>
+    <script>
+      var slideIndex = 1;
+      showSlides(slideIndex);
+
+      function plusSlides(n) {
+        showSlides(slideIndex += n);
+      }
+
+      function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("slide");
+        if (n > slides.length)
+        {
+          slideIndex = 1;
+        }
+        if (n < 1)
+        {
+          slideIndex = slides.length
+        }
+        for (i = 0; i < slides.length; i++)
+        {
+          slides[i].style.display = "none";
+        }
+        slides[slideIndex-1].style.display = "block";
+      }
+    </script>
   </body>
   </html> 
+  
