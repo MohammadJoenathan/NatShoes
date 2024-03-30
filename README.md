@@ -1,12 +1,12 @@
 # NatShoes | Website Produksi Sepatu |
 
-[![ForTheBadge uses-html](http://ForTheBadge.com/images/badges/uses-html.svg)](http://ForTheBadge.com) [![ForTheBadge uses-css](http://ForTheBadge.com/images/badges/uses-css.svg)](http://ForTheBadge.com)
+[![ForTheBadge uses-html](http://ForTheBadge.com/images/badges/uses-html.svg)](http://ForTheBadge.com) [![ForTheBadge uses-css](http://ForTheBadge.com/images/badges/uses-css.svg)](http://ForTheBadge.com) [![ForTheBadge uses-javascript](http://ForTheBadge.com/images/badges/uses-javascript.svg)](http://ForTheBadge.com)
 
 ![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white) ![Laragon](https://img.shields.io/badge/Laragon-0E83CD?style=for-the-badge&logo=Laragon&logoColor=white)
 
-![Maintainer](https://img.shields.io/badge/Author-MohammadJoenathan|2218060|-blue)
+![Maintainer](https://img.shields.io/badge/Author-MohammadJoenathan|2218060|-purple)
 
-[![Generic badge](https://img.shields.io/badge/Release-version2-purple.svg)](https://shields.io/) [![Generic badge](https://img.shields.io/badge/CreatedAt-Sunday,March24,2024-purple.svg)](https://shields.io/)
+[![Generic badge](https://img.shields.io/badge/Release-version3-purple.svg)](https://shields.io/) [![Generic badge](https://img.shields.io/badge/UpdatedAt-Saturday,March30,2024-purple.svg)](https://shields.io/)
 
 > Website diatas merupakan tugas praktikum pemrograman website dengan judul NatShoes atau Website Produksi Sepatu.
 
