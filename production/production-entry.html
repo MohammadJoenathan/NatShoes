@@ -32,7 +32,7 @@
             </a>
           </li>
         <li class="log_out">
-          <a href="#">
+          <a href="../index.html">
             <i class='bx bx-log-out'></i>
             <span class="links_name">Log out</span>
           </a>
@@ -61,11 +61,15 @@
 			<input class="input" type="number" name="durasi_produksi" id="durasi_produksi" placeholder="Durasi Produksi" />
             <label for="buat_ke">Pembuatan Ke</label>
 			<input class="input" type="number" name="buat_ke" id="buat_ke" placeholder="Pembuatan Ke" style="margin-bottom: 20px"/>
-		   <button type="submit" class="btn btn-simpan" name="simpan"> Simpan </button>
+		   <button type="submit" class="btn btn-simpan" name="simpan" onclick="SimpanData()"> Simpan </button>
 		</form>
 	   </div>
 	</div>
   <script>
+    function SimpanData() {
+      alert("Data Berhasil Disimpan");
+    }
+    
     let sidebar = document.querySelector(".sidebar");
     let sidebarBtn = document.querySelector(".sidebarBtn");
         sidebarBtn.onclick = function() {

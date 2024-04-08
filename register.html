@@ -46,7 +46,7 @@
                 <label for="konfirmasiPassword" class="form-label">Konfirmasi Password</label>
                 <input type="password" class="form-control" id="konfirmasiPassword" name="konfirmasiPassword" required>
               </div>
-                <button type="submit" class="btn btn-primary">Register</button>
+                <button type="submit" class="btn btn-primary" onclick="RegisterForm()">Register</button>
               </form>
               </div>
               <div class="card-footer text-muted">
@@ -64,5 +64,27 @@
       </div>
     </div>
   </footer>
+<script>
+  function RegisterForm() {
+    var username = document.getElementById("username").value;
+    var email = document.getElementById("email").value;
+    var password = document.getElementById("password").value;
+    var konfirmasiPassword = document.getElementById("konfirmasiPassword").value;
+
+    if (username === "" || email === "" || password === "" || konfirmasiPassword === "") {
+      alert("Isi semua data terlebih dahulu.");
+      return false;
+    }
+
+    if (password !== konfirmasiPassword) {
+      alert("Password dan konfirmasi password harus sama.");
+      return false;
+    }
+
+    alert("Register berhasil! Silahkan login.");
+
+    return true;
+  }
+</script>
 </body>
 </html>
