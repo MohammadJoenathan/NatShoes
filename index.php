@@ -17,9 +17,9 @@
         <i class="fas fa-bars"></i>
       </label>
       <ul>
-        <li><a class="active" href="index.html">Home</a></li>
-        <li><a href="login.html">Login</a></li>
-        <li><a href="register.html">Register</a></li>
+        <li><a class="active" href="index.php">Home</a></li>
+        <li><a href="login.php">Login</a></li>
+        <li><a href="register.php">Register</a></li>
       </ul>
     </nav>
     <div class="hero">

@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <title> Admin NatShoes | Production</title>
+    <title> Admin NatShoes | Transaction</title>
     <link rel="stylesheet" href="../css/style_admin.css">
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,25 +14,25 @@
     </div>
       <ul class="nav-links">
         <li>
-          <a href="../admin.html">
+          <a href="../admin.php">
             <i class='bx bx-grid-alt' ></i>
             <span class="links_name">Dashboard</span>
           </a>
         </li>
         <li>
-          <a href="production.html" class="active">
+          <a href="../production/production.php">
             <i class='bx bx-box' ></i>
             <span class="links_name">Production</span>
           </a>
         </li>
         <li>
-            <a href="../transaction/transaction.html">
+            <a href="transaction.php" class="active">
               <i class='bx bx-list-ul' ></i>
               <span class="links_name">Transaction</span>
             </a>
           </li>
         <li class="log_out">
-          <a href="../index.html">
+          <a href="../index.php">
             <i class='bx bx-log-out'></i>
             <span class="links_name">Log out</span>
           </a>
@@ -50,49 +50,30 @@
       </div>
     </nav>
      <div class="home-content">
-        <h3>Production</h3>
- 	   <button type="button" class="btn btn-tambah">
- 	      <a href="production-entry.html">Tambah Data</a>
-	   </button>
-	   <table class="table-data">
-		<thead>
-		   <tr>
-			<th scope="col" style="width: 20%">Nama Sepatu</th>
-			<th scope="col" style="width: 20%">Jumlah Sepatu</th>
-            <th scope="col" style="width: 20%">Durasi Produksi</th>
-            <th scope="col" style="width: 20%">Pembuatan Ke</th>
-			<th scope="col" style="width: 20%">Aksi</th>
-		   </tr>
-		</thead>
-		<tbody>
-		   <tr>
-			<td>Sneakers High Demin</td>
-			<td>100</td>
-			<td>30 Hari</td>
-            <td>1</td>
-			<td>
-                <button type="button" class="btn btn-edit">
-                  <a href="#">Edit</a>
-                </button>
-                <button type="button" class="btn btn-delete" onclick="konfirHapus()">
-                  <a href="production.html">Hapus</a>
-                </button>
-              </td>
-		   </tr>
-		</tbody>
-	   </table>
-    </div>
+        <h3>Input Transaction</h3>
+	   <div class="form-login">
+		<form action="">
+		   <label for="nama_pembeli">Nama Pembeli</label>
+		   <input class="input" type="text" name="nama_pembeli" id="nama_pembeli" placeholder="Nama Pembeli" />
+		   <label for="nama_sepatu">Nama Sepatu</label>
+			 <input class="input" type="text" name="nama_sepatu" id="nama_sepatu" placeholder="Nama Sepatu" />
+		   <label for="ukuran_sepatu">Ukuran Sepatu</label>
+			<input class="input" type="number" name="ukuran_sepatu" id="ukuran_sepatu" placeholder="Ukuran Sepatu" />
+       <label for="harga">Harga</label>
+		   <input class="input" type="number" name="harga" id="harga" placeholder="Harga" />
+       <label for="jumlah">Jumlah Sepatu</label>
+		   <input class="input" type="number" name="jumlah" id="jumlah" placeholder="Jumlah Sepatu" />
+		   <label for="tgl">Tanggal Transaksi</label>
+		   <input class="input" type="date" name="tgl" id="tgl" style="margin-bottom: 20px" />
+		   <button type="submit" class="btn btn-simpan" name="simpan" onclick="SimpanData()"> Simpan </button>
+		</form>
+	   </div>
     </div>
     <script>
-      function konfirHapus() {
-        if (confirm("Apakah Anda yakin menghapus data ini?")) {
-          alert("Data berhasil dihapus.");
-          // Kode untuk menghapus data
-        } else {
-          alert("Penghapusan data dibatalkan.");
-        }
+      function SimpanData() {
+        alert("Data Berhasil Disimpan");
       }
-      
+
       let sidebar = document.querySelector(".sidebar");
       let sidebarBtn = document.querySelector(".sidebarBtn");
           sidebarBtn.onclick = function() {

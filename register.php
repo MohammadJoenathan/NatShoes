@@ -17,9 +17,9 @@
         <i class="fas fa-bars"></i>
       </label>
       <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="login.html">Login</a></li>
-        <li><a class="active" href="register.html">Register</a></li>
+        <li><a href="index.php">Home</a></li>
+        <li><a href="login.php">Login</a></li>
+        <li><a class="active" href="register.php">Register</a></li>
       </ul>
     </nav>
   <main>
@@ -29,7 +29,7 @@
           <h3>Register</h3>
         </div>
           <div class="card-body">
-            <form action="login.html">
+            <form action="login.php">
               <div class="">
                 <label for="username" class="form-label">Username</label>
                 <input type="text" class="form-control" id="username" name="username" required>
@@ -50,7 +50,7 @@
               </form>
               </div>
               <div class="card-footer text-muted">
-                  <p>Sudah punya akun? <a href="login.html">Login Sekarang</a></p>
+                  <p>Sudah punya akun? <a href="login.php">Login Sekarang</a></p>
               </div>
             </form>
           </div>
@@ -87,4 +87,4 @@
   }
 </script>
 </body>
-</html>
+</ph>

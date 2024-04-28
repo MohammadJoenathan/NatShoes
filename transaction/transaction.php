@@ -14,25 +14,25 @@
     </div>
       <ul class="nav-links">
         <li>
-          <a href="../admin.html">
+          <a href="../admin.pho">
             <i class='bx bx-grid-alt' ></i>
             <span class="links_name">Dashboard</span>
           </a>
         </li>
         <li>
-          <a href="../production/production.html">
+          <a href="../production/production.php">
             <i class='bx bx-box' ></i>
             <span class="links_name">Production</span>
           </a>
         </li>
         <li>
-            <a href="transaction.html" class="active">
+            <a href="transaction.php" class="active">
               <i class='bx bx-list-ul' ></i>
               <span class="links_name">Transaction</span>
             </a>
           </li>
         <li class="log_out">
-          <a href="../index.html">
+          <a href="../index.php">
             <i class='bx bx-log-out'></i>
             <span class="links_name">Log out</span>
           </a>
@@ -50,28 +50,51 @@
       </div>
     </nav>
      <div class="home-content">
-        <h3>Input Transaction</h3>
-	   <div class="form-login">
-		<form action="">
-		   <label for="nama_pembeli">Nama Pembeli</label>
-		   <input class="input" type="text" name="nama_pembeli" id="nama_pembeli" placeholder="Nama Pembeli" />
-		   <label for="nama_sepatu">Nama Sepatu</label>
-			 <input class="input" type="number" name="nama_sepatu" id="nama_sepatu" placeholder="Nama Sepatu" />
-		   <label for="ukuran_sepatu">Ukuran Sepatu</label>
-			<input class="input" type="number" name="ukuran_sepatu" id="ukuran_sepatu" placeholder="Ukuran Sepatu" />
-       <label for="harga">Harga</label>
-		   <input class="input" type="number" name="harga" id="harga" placeholder="Harga" />
-       <label for="jumlah">Jumlah Sepatu</label>
-		   <input class="input" type="number" name="jumlah" id="jumlah" placeholder="Jumlah Sepatu" />
-		   <label for="tgl">Tanggal Transaksi</label>
-		   <input class="input" type="date" name="tgl" id="tgl" style="margin-bottom: 20px" />
-		   <button type="submit" class="btn btn-simpan" name="simpan" onclick="SimpanData()"> Simpan </button>
-		</form>
+        <h3>Trasaction</h3>
+		<button type="button" class="btn btn-tambah">
+		   <a href="transaction-entry.html">Tambah Data</a>
+		</button>
+		<table class="table-data">
+		   <thead>
+			<tr>
+			  <th style="width: 13%">Nama Pembeli</th>
+			  <th style="width: 13%">Nama Sepatu</th>
+        <th style="width: 13%">Ukuran Sepatu</th>
+			  <th style="width: 13%">Harga</th>
+        <th style="width: 13%">Jumlah Sepatu</th>
+			  <th style="width: 15%">Tanggal Transaksi</th>
+			  <th>Action</th>
+			</tr>
+		   </thead>
+		   <tbody>
+			<tr>
+			   <td>Natan</td>
+			   <td>Sneakers High Denim</td>
+			   <td>33</td>
+         <td>270000</td>
+         <td>2</td>
+			   <td>03-23-2024</td>
+			   <td>
+          <button type="button" class="btn btn-edit">
+            <a href="#">Edit</a>
+          </button>
+          <button type="button" class="btn btn-delete" onclick="konfirHapus()">
+            <a href="transaction.html">Hapus</a>
+          </button>
+        </td>
+			</tr>
+		   </tbody>
+		</table>
 	   </div>
     </div>
     <script>
-      function SimpanData() {
-        alert("Data Berhasil Disimpan");
+      function konfirHapus() {
+        if (confirm("Apakah Anda yakin menghapus data ini?")) {
+          alert("Data berhasil dihapus.");
+          // Kode untuk menghapus data
+        } else {
+          alert("Penghapusan data dibatalkan.");
+        }
       }
 
       let sidebar = document.querySelector(".sidebar");

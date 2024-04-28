@@ -14,25 +14,25 @@
     </div>
       <ul class="nav-links">
         <li>
-          <a href="../admin.html">
+          <a href="../admin.php">
             <i class='bx bx-grid-alt' ></i>
             <span class="links_name">Dashboard</span>
           </a>
         </li>
         <li>
-          <a href="production.html" class="active">
+          <a href="production.php" class="active">
             <i class='bx bx-box' ></i>
             <span class="links_name">Production</span>
           </a>
         </li>
         <li>
-            <a href="../transaction/transaction.html">
+            <a href="../transaction/transaction.php">
               <i class='bx bx-list-ul' ></i>
               <span class="links_name">Transaction</span>
             </a>
           </li>
         <li class="log_out">
-          <a href="../index.html">
+          <a href="../index.php">
             <i class='bx bx-log-out'></i>
             <span class="links_name">Log out</span>
           </a>
