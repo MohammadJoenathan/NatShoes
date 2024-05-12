@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 12, 2024 at 04:07 AM
+-- Generation Time: May 12, 2024 at 03:45 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -43,6 +43,7 @@ CREATE TABLE `bahan_baku` (
 CREATE TABLE `pengiriman` (
   `id_pengiriman` int(11) NOT NULL,
   `id_produksi` int(11) NOT NULL,
+  `penerima` varchar(30) NOT NULL,
   `jumlah_barang` int(11) NOT NULL,
   `alamat_tujuan` varchar(50) NOT NULL,
   `status_pengiriman` enum('Diproses','Dikirim','Diterima','') NOT NULL
