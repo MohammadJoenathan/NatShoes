@@ -1,8 +1,14 @@
+<?php 
+	session_start();
+	if($_SESSION['username'] == null) {
+		header('location:login.php');
+	}
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <title> Dashboard Admin NatShoes </title>
+    <title> Dashboard Admin </title>
     <link rel="stylesheet" href="./css/style_admin.css">
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,25 +21,31 @@
       <ul class="nav-links">
         <li>
           <a href="admin.php" class="active">
-            <i class='bx bx-grid-alt' ></i>
+            <i class='bx bx-palette' ></i>
             <span class="links_name">Dashboard</span>
           </a>
         </li>
         <li>
-          <a href="./production/production.php">
-            <i class='bx bx-box' ></i>
-            <span class="links_name">Production</span>
+          <a href="./bahanbaku/bahanbaku.php">
+            <i class='bx bx-cube-alt' ></i>
+            <span class="links_name">Bahan Baku</span>
           </a>
         </li>
         <li>
-          <a href="./transaction/transaction.php">
-            <i class='bx bx-list-ul' ></i>
-            <span class="links_name">Transaction</span>
+          <a href="./produksi/produksi.php">
+            <i class='bx bx-archive' ></i>
+            <span class="links_name">Produksi</span>
+          </a>
+        </li>
+        <li>
+          <a href="./pengiriman/pengiriman.php">
+            <i class='bx bx-package' ></i>
+            <span class="links_name">Pengiriman</span>
           </a>
         </li>
         <li class="log_out">
-          <a href="index.php">
-            <i class='bx bx-log-out'></i>
+          <a href="logout.php">
+            <i class='bx bx-log-out-circle'></i>
             <span class="links_name">Log out</span>
           </a>
         </li>
@@ -47,17 +59,23 @@
       </div>
       <div class="profile-details">
         <img src="./assets/images/admin.png" alt="Logo Administrator">
-        <span class="admin_name">Administrator</span>
+        <span class="admin_name"><?php 
+          echo $_SESSION['username'];
+        ?></span>
       </div>
     </nav>
-     <div class="home-content">
-       <div class="overview-boxes">
-          <h2>Selamat Datang Administrator!</h2>
-          <div id="clock"></div>
+    <div class="home-content">
+    <div class="overview-boxes">
+			<h2 id="text"> Selamat Datang 
+        <?php 
+          echo $_SESSION['username'];
+        ?>
+			</h2>
           <div id="date"></div>
+			    <div id="clock"></div>
         </div>
       </div>
-    </div>
+      </div>
   </section>
   <script>
     function currentTime() {

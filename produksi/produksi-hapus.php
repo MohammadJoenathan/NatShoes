@@ -1,3 +1,24 @@
+<?php
+  include '../koneksi.php';
+  $id = $_GET['id'];
+  if(!isset($_GET['id'])) {
+    echo "
+      <script>
+        alert('Tidak ada ID yang Terdeteksi');
+        window.location = 'categories.php';
+      </script>
+    ";
+  }
+
+  $sql = "SELECT * FROM tb_categories WHERE id = '$id'";
+  $result = mysqli_query($koneksi, $sql);
+  $data = mysqli_fetch_assoc($result);
+
+	session_start();
+	if($_SESSION['username'] == null) {
+		header('location:../login.php');
+	}
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -50,19 +71,22 @@
       </div>
     </nav>
 	<div class="home-content">
-	  <h3>Input Production</h3>
+	  <h3>Hapus Production</h3>
 	  <div class="form-login">
-		<form action="">
-	  	    <label for="nama_sepatu">Nama Sepatu</label>
-			<input class="input" type="text" name="nama_sepatu" id="nama_sepatu" placeholder="Nama Sepatu"/>
- 		    <label for="jumlah_sepatu">Jumlah Sepatu</label>
-			<input class="input" type="number" name="jumlah_sepatu" id="jumlah_sepatu" placeholder="Jumlah Sepatu" />
-            <label for="durasi_produksi">Durasi Produksi</label>
-			<input class="input" type="number" name="durasi_produksi" id="durasi_produksi" placeholder="Durasi Produksi" />
-            <label for="buat_ke">Pembuatan Ke</label>
-			<input class="input" type="number" name="buat_ke" id="buat_ke" placeholder="Pembuatan Ke" style="margin-bottom: 20px"/>
-		   <button type="submit" class="btn btn-simpan" name="simpan" onclick="SimpanData()"> Simpan </button>
-		</form>
+      <h4>Ingin Menghapus Data ?</h4>
+            <form
+              action="categories-proses.php"
+              method="post"
+              enctype="multipart/form-data"
+            >
+              <input type="hidden" name="id" value="<?= $data['id'] ?>">
+              <button type="submit" class="btn" name="hapus" style="margin-top: 50px;">
+			Yes
+		  </button>
+		  <button type="submit" class="btn" name="tidak">
+			No
+		  </button>
+            </form>
 	   </div>
 	</div>
   <script>

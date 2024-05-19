@@ -1,4 +1,4 @@
-<?php
+<!-- <?php
 session_start();
 
 // Cek apakah ada data yang dikirimkan melalui metode POST
@@ -21,7 +21,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     exit();
   }
 }
-?>
+?> -->
 
 <!DOCTYPE html>
 <html lang="id">
@@ -55,7 +55,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
           <h3>Login</h3>
         </div>
         <div class="card-body">
-          <form action="login.php" method="post">
+          <form action="login-proses.php" method="post">
             <div class="">
               <label for="username" class="form-label">Username</label>
               <input type="text" class="form-control" id="username" name="username">
@@ -64,7 +64,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
               <label for="password" class="form-label">Password</label>
               <input type="password" class="form-control" id="password" name="password" required>
             </div>
-            <button type="submit" class="btn btn-primary">Login</button>
+            <button type="submit" class="btn btn-primary" name="login" id="login">Login</button>
           </form>
         </div>
         <div class="card-footer">

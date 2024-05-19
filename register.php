@@ -29,7 +29,7 @@
           <h3>Register</h3>
         </div>
           <div class="card-body">
-            <form action="login.php">
+            <form action="register-proses.php" method="post">
               <div class="">
                 <label for="username" class="form-label">Username</label>
                 <input type="text" class="form-control" id="username" name="username" required>
@@ -42,11 +42,11 @@
                 <label for="password" class="form-label">Password</label>
                 <input type="password" class="form-control" id="password" name="password" required>
               </div><br>
-              <div class="">
+              <!-- <div class="">
                 <label for="konfirmasiPassword" class="form-label">Konfirmasi Password</label>
                 <input type="password" class="form-control" id="konfirmasiPassword" name="konfirmasiPassword" required>
-              </div>
-                <button type="submit" class="btn btn-primary" onclick="RegisterForm()">Register</button>
+              </div> -->
+                <button type="submit" class="btn btn-primary" name="register" id="register">Register</button>
               </form>
               </div>
               <div class="card-footer text-muted">
@@ -64,7 +64,7 @@
       </div>
     </div>
   </footer>
-<script>
+<!-- <script>
   function RegisterForm() {
     var username = document.getElementById("username").value;
     var email = document.getElementById("email").value;
@@ -85,6 +85,6 @@
 
     return true;
   }
-</script>
+</script> -->
 </body>
 </ph>
