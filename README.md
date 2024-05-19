@@ -6,7 +6,7 @@
 
 ![Maintainer](https://img.shields.io/badge/Author-MohammadJoenathan|2218060|-purple)
 
-[![Generic badge](https://img.shields.io/badge/Release-version4-purple.svg)](https://shields.io/) [![Generic badge](https://img.shields.io/badge/UpdatedAt-Sunday,_Mey_19,_2024-purple.svg)](https://shields.io/)
+[![Generic badge](https://img.shields.io/badge/Release-version7-purple.svg)](https://shields.io/) [![Generic badge](https://img.shields.io/badge/UpdatedAt-Sunday,_Mey_19,_2024-purple.svg)](https://shields.io/)
 
 > Website diatas merupakan tugas praktikum pemrograman website dengan judul NatShoes atau Website Produksi Sepatu.
 
