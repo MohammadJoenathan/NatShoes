@@ -5,7 +5,7 @@
     echo "
       <script>
         alert('Tidak ada ID yang Terdeteksi');
-        window.location = 'categories.php';
+        window.location = 'bahanbaku.php';
       </script>
     ";
   }
@@ -47,13 +47,13 @@
           </a>
         </li>
         <li>
-          <a href="./produksi/produksi.php">
+          <a href="../produksi/produksi.php">
             <i class='bx bx-archive' ></i>
             <span class="links_name">Produksi</span>
           </a>
         </li>
         <li>
-          <a href="./pengiriman/pengiriman.php">
+          <a href="../pengiriman/pengiriman.php">
             <i class='bx bx-package' ></i>
             <span class="links_name">Pengiriman</span>
           </a>
@@ -88,7 +88,7 @@
               <label for="harga">Harga</label>
               <input class="input" type="number" name="harga" id="harga" value="<?= $data['harga']?>"/>
               <div align="center">
-              <button type="submit" class="btn btn-simpan" name="edit"> Ubah </button>
+              <button type="submit" class="btn btn-simpan" name="edit"> Edit </button>
               <button type="reset" class="btn btn-reset" name="reset"> Reset </button>
               </div> 
        </form>

@@ -59,30 +59,38 @@ if(isset($_POST['simpan'])) {
             </script>
         ";
     }
-}elseif(isset($_POST['hapus'])) {
-    $id = $_POST['id'];
+}
+elseif (isset($_GET['hapus']) && isset($_GET['id'])) {
+    $id = $_GET['id'];
 
-    // hapus gambar
-    $sql = "SELECT * FROM bahan_baku WHERE id = $id";
-    $result = mysqli_query($koneksi, $sql);
-    $row = mysqli_fetch_assoc($result);
+    // Validasi apakah id telah diisi
+    if (empty($id)) {
+        echo "<script>
+                alert('Pilih Data Bahan Baku yang Ingin Dihapus');
+                window.location = 'bahanbaku.php';
+              </script>";
+        return;
+    }
 
-    $sql = "DELETE FROM bahan_baku WHERE id = $id";
-    if(mysqli_query($koneksi, $sql)) {
-        echo "
-            <script>
+    // Delete data dari tb_bahan_baku
+    $sql = "DELETE FROM bahan_baku WHERE id = ?";
+    $stmt = mysqli_prepare($koneksi, $sql);
+    mysqli_stmt_bind_param($stmt, 'i', $id);
+
+    if (mysqli_stmt_execute($stmt)) {
+        echo "<script>
                 alert('Data Bahan Baku Berhasil Dihapus');
                 window.location = 'bahanbaku.php';
-            </script>
-        ";
-    }else {
-        echo "
-            <script>
-                alert('Data Bahan Baku Gagal Dihapus');
+              </script>";
+    } else {
+        echo "<script>
+                alert('Terjadi Kesalahan');
                 window.location = 'bahanbaku.php';
-            </script>
-        ";
+              </script>";
     }
-}else {
+
+    mysqli_stmt_close($stmt);
+} else {
     header('location: bahanbaku.php');
+    exit;
 }

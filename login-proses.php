@@ -19,7 +19,7 @@ if(isset($_POST['login'])) {
       } else { 
           echo "
           <script>
-            alert('email atau password anda salah, Silahkan coba lagi');
+            alert('username atau password anda salah, Silahkan coba lagi');
             window.location = 'login.php';
           </script>
           ";
@@ -27,7 +27,7 @@ if(isset($_POST['login'])) {
     } else { 
         echo "
         <script>
-          alert('email atau password anda salah, Silahkan coba lagi');
+          alert('username atau password anda salah, Silahkan coba lagi');
           window.location = 'login.php';
         </script>
         ";

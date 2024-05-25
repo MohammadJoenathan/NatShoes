@@ -32,13 +32,13 @@
           </a>
         </li>
         <li>
-          <a href="./produksi/produksi.php">
+          <a href="../produksi/produksi.php">
             <i class='bx bx-archive' ></i>
             <span class="links_name">Produksi</span>
           </a>
         </li>
         <li>
-          <a href="./pengiriman/pengiriman.php">
+          <a href="../pengiriman/pengiriman.php">
             <i class='bx bx-package' ></i>
             <span class="links_name">Pengiriman</span>
           </a>

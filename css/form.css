@@ -1,0 +1,16 @@
+.form-login {
+	display: inline-flex;
+    justify-content: center;
+	background-color: white;
+	padding: 20px;
+	margin: 10px auto;
+	border-radius: 10px;
+}
+.input {
+	width: 100%;
+	margin: 10px 0;
+	padding: 10px;
+	border-radius: 10px;
+	border: 1px solid rgb(148, 148, 148);
+}
+

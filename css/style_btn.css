@@ -1,0 +1,25 @@
+
+.btn-cetak {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  .btn-cetak {
+   background-color: #d91515; 
+   color: white;
+  }
+  
+  .btn-cetak {
+      margin: 15px 10px;
+  }
+  
+  .btn-cetak:hover {
+    background-color: #dc4970;
+  }
+  
+  .btn-cetak a {
+    color: white;
+   }

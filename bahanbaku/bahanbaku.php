@@ -8,7 +8,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <title> Bahan Baku</title>
+    <title> Data Bahan Baku</title>
     <link rel="stylesheet" href="../css/style_bahan.css">
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -32,13 +32,13 @@
           </a>
         </li>
         <li>
-          <a href="./produksi/produksi.php">
+          <a href="../produksi/produksi.php">
             <i class='bx bx-archive' ></i>
             <span class="links_name">Produksi</span>
           </a>
         </li>
         <li>
-          <a href="./pengiriman/pengiriman.php">
+          <a href="../pengiriman/pengiriman.php">
             <i class='bx bx-package' ></i>
             <span class="links_name">Pengiriman</span>
           </a>
@@ -100,7 +100,8 @@
 		                          <a href='bahanbaku-edit.php?id=$data[id]'><i class='bx bx-edit'></i> Edit </a>
 		                      </button>
                           <button class= 'btn btn-delete'>
-		                          <a href='bahanbaku-hapus.php?id=$data[id]'><i class='bx bx-trash'></i> Hapus </a>
+		                          <a href='bahanbaku-proses.php?hapus&id=$data[id]' onclick='return confirm('Apakah anda yakin menghapus data ini?')'>
+                              <i class='bx bx-trash'></i> Hapus </a>
 		                      </button>
                         </td>
                       </tr>
